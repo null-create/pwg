@@ -24,6 +24,16 @@ Generate a 32 character password string (default behavior).
 pwg
 ```
 
+Example output:
+
+```bash
+New password:
+
+l?&MO$})iQOz,<p&KVv*xC"UG$q{Kc)+
+
+***This password will NOT be shown again. Save it before exiting!***
+```
+
 Generate a 64 charactor password string.
 
 ```bash
@@ -35,6 +45,16 @@ Omit the `-d` flag to not use dashes. Use the `-s` flag to specify number of wor
 
 ```bash
 pwg -t -d
+```
+
+Example output:
+
+```bash
+New password:
+
+endoenzyme-sphacelia-superannuity-endosteum
+
+***This password will NOT be shown again. Save it before exiting!***
 ```
 
 ### Flags
