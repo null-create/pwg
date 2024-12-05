@@ -1,6 +1,7 @@
 package pkg
 
 import (
+	"strings"
 	"testing"
 
 	"github.com/alecthomas/assert/v2"
@@ -14,10 +15,13 @@ func TestSecretGeneration(t *testing.T) {
 }
 
 func TestTextSecretGeneration(t *testing.T) {
-	testSecret, err := GenPhraseSecret(4, false)
+	testSecret, err := GenPhraseSecret(4, true)
 	if err != nil {
 		t.Fatal(err)
 	}
 
+	words := strings.Split(testSecret, "-")
+
 	assert.NotEqual(t, "", testSecret)
+	assert.Equal(t, 4, len(words))
 }
