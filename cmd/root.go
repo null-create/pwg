@@ -15,9 +15,10 @@ var (
 	cfgfile string
 
 	rootCmd = &cobra.Command{
-		Use:   "pwg",
-		Short: "Password generator. Use to create cryptographically secure passwords.",
-		Run:   runGenPwd,
+		Use:     "pwg",
+		Version: "1.0.0",
+		Short:   "Password generator. Use to create cryptographically secure passwords.",
+		Run:     runGenPwd,
 	}
 )
 
