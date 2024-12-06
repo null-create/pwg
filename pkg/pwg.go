@@ -9,9 +9,9 @@ import (
 
 const chars string = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-!?@#$%^&*()_+={}:;><,.'"|\/`
 
-// generate a random string of n length to use as a secret
-//
-// technique from: https://stackoverflow.com/questions/22892120/how-to-generate-a-random-string-of-a-fixed-length-in-go
+// info about secret generation: https://stackoverflow.com/questions/22892120/how-to-generate-a-random-string-of-a-fixed-length-in-go
+
+// generate a random string of n length
 func GenSecret(length int) string {
 	charLen := len(chars)
 	b := make([]byte, length)
