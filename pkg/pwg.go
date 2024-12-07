@@ -16,8 +16,7 @@ func GenSecret(length int) string {
 	charLen := len(chars)
 	b := make([]byte, length)
 	// generates len(b) random bytes.
-	// bytes serve as indicies into the chars string,
-	// and values are modulo'd if index > len(chars)
+	// bytes serve as indicies into the chars string
 	_, err := rand.Read(b)
 	if err != nil {
 		log.Fatalf("failed to generate secret: %v", err)
