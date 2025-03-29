@@ -44,7 +44,7 @@ Generate a password consisting of four random words separated by dashes.
 Omit the `-d` flag to not use dashes. Use the `-s` flag to specify number of words (default is 4).
 
 ```bash
-pwg -t -d
+pwg -td
 ```
 
 Example output:

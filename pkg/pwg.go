@@ -15,7 +15,9 @@ const chars string = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456
 func GenSecret(length int) string {
 	charLen := len(chars)
 	b := make([]byte, length)
-	_, err := rand.Read(b) // generates len(b) random bytes
+	// generates len(b) random bytes.
+	// bytes serve as indicies into the chars string
+	_, err := rand.Read(b)
 	if err != nil {
 		log.Fatalf("failed to generate secret: %v", err)
 	}
